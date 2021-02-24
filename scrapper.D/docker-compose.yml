@@ -1,0 +1,49 @@
+version: "3.5"
+services:
+
+  sql_learning_db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=toto
+      - MYSQL_DATABASE=e_learning_db
+      - MYSQL_USER=root
+    networks:
+      - data_sql
+      - data_python
+
+
+  flask_learning:
+    image: python
+    build: ./flask
+    environment:
+      - FLASK_ENV=development
+      - FLASK_RUN_PORT=4002
+      - MYSQL_ROOT_PASSWORD=toto
+      - MYSQL_DATABASE=e_learning_db
+      - MYSQL_USER=root
+      - MYSQL_HOST=e_learning_db
+    ports: 
+      - "3002:4002"
+    depends_on:
+      - "library"
+    restart: always
+    command: python api_flask.py
+    networks:
+      - data_sql
+
+
+  scrapper_learning:
+    image: python
+    build: ./library
+    environment:
+      - MYSQL_ROOT_PASSWORD=toto
+      - MYSQL_DATABASE=e_learning_db
+      - MYSQL_USER=root
+      - MYSQL_HOST=e_learning_db
+    volumes:
+      - .:/library
+    depends_on:
+      - "sql_learning_db"
+    networks: 
+      - data_python
+

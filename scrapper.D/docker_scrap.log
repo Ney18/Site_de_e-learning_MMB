@@ -1,0 +1,92 @@
+2021-02-23 15:53:27,093 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:53:27,308 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:53:27,828 - root -ERROR - [SCRAP DOCKER] ERROR !! failed to access urlglobal name 'self' is not defined
+2021-02-23 15:53:40,742 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:53:40,899 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:53:51,614 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:53:51,765 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:54:04,028 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:54:04,186 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:54:46,150 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:54:46,341 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:54:59,812 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:54:59,976 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 15:55:09,176 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 15:55:09,337 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:07:19,571 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:07:19,761 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:08:58,540 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:08:58,694 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:09:14,849 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:09:15,006 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:09:15,503 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:20:41,535 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:20:41,736 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:20:42,566 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:20:42,568 - root -INFO - [SCRAP] accessing carpet info -- End
+2021-02-23 16:21:26,785 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:21:26,959 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:21:27,725 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:26:10,626 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:26:11,806 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:26:12,501 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:28:19,880 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:28:20,061 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:28:20,703 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:28:40,992 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:28:41,155 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:28:41,807 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:29:41,607 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:29:41,799 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:29:42,354 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:39:27,623 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:39:27,799 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:39:28,471 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:59:31,175 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:59:31,361 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:59:32,067 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 16:59:39,314 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 16:59:39,487 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 16:59:40,078 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-23 17:00:07,927 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-23 17:00:08,099 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-23 17:00:08,646 - root -INFO - [SCRAP DOcker] accessing docker title info -- Start
+2021-02-24 08:33:53,792 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-24 08:33:54,032 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-24 08:33:54,775 - root -INFO - [SCRAP DOCKER] accessing docker title info -- Start
+2021-02-24 08:35:21,387 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-24 08:35:21,548 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-24 08:35:21,944 - root -INFO - [SCRAP DOCKER] accessing docker title info -- Start
+2021-02-24 08:35:21,945 - root -INFO - [SCRAP] accessing carpet info -- End
+2021-02-24 08:37:21,057 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.youtube.com:443
+2021-02-24 08:37:21,236 - urllib3.connectionpool -DEBUG - https://www.youtube.com:443 "GET /results?search_query=docker HTTP/1.1" 200 None
+2021-02-24 08:37:21,827 - root -INFO - [SCRAP DOCKER] accessing docker title info -- Start
+2021-02-24 08:37:21,828 - root -INFO - [SCRAP] accessing carpet info -- End
+2021-02-24 11:51:39,833 - root -INFO - [DOCKER] accessing docker video title -- Start
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video title -- End
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video link -- Start
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video link -- End
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video youtuber -- Start
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video youtuber -- End
+2021-02-24 11:51:39,834 - root -INFO - [DOCKER] accessing docker video duration -- Start
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker video duration -- End
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker video vues -- Start
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker video vues -- End
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker video theme -- Start
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker video theme -- End
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker zip list -- Start
+2021-02-24 11:51:39,835 - root -INFO - [DOCKER] accessing docker zip list -- End
+2021-02-24 11:57:42,330 - root -INFO - [DOCKER] accessing docker video title -- Start
+2021-02-24 11:57:42,330 - root -INFO - [DOCKER] accessing docker video title -- End
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video link -- Start
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video link -- End
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video youtuber -- Start
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video youtuber -- End
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video duration -- Start
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video duration -- End
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video vues -- Start
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video vues -- End
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video theme -- Start
+2021-02-24 11:57:42,331 - root -INFO - [DOCKER] accessing docker video theme -- End
+2021-02-24 11:57:42,332 - root -INFO - [DOCKER] accessing docker zip list -- Start
+2021-02-24 11:57:42,332 - root -INFO - [DOCKER] accessing docker zip list -- End
