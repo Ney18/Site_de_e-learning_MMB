@@ -4,3 +4,4 @@
 .dockerignore
 divers
 log
+__pycache__

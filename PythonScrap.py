@@ -1,5 +1,6 @@
 import logging
 
+
 class PythonScrap:
 
     logging.basicConfig(filename="log/Python_scrap.log",
@@ -21,7 +22,3 @@ class PythonScrap:
             ]
         except Exception as e:
             logging.error("error lors de l'insertion")
-
-toto = PythonScrap()
-print(toto.data)
-

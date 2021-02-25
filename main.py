@@ -5,6 +5,7 @@ import requests
 from setup_logger import logging
 from docker_scrap import *
 from js_scrap import *
+from PythonScrap import *
 #from file_db import *
 
 # print("hello")
@@ -18,6 +19,22 @@ logging.basicConfig(level=logging.DEBUG,
 message = ''
 
 
+def docker():
+    docker_class = VideoDocker()
+    docker_class.docker_title()
+    docker_class.docker_link()
+    docker_class.docker_youtuber()
+    docker_class.docker_duration()
+    docker_class.docker_vue()
+    docker_class.docker_theme()
+    # print(docker_class.docker_zip())
+
+    return docker_class.docker_zip()
+
+
+# docker()
+
+
 @app.route('/')
 def index():
     return message
@@ -26,7 +43,7 @@ def index():
 @app.route('/create_table/<tablename>')
 def create_table(tablename):
     global message
-    db_learn = BDD()
+    db_learn = Table()
     try:
         db_learn.execute_query(db_learn.create_table, tablename)
         message = 'SUCCESS'
@@ -42,7 +59,10 @@ def insert_data(tablename):
     global message
     db_learn = Table()
     try:
-        db_learn.insert_data(tablename, JsScrap().data)
+        if tablename == 'js':
+            db_learn.insert_data(tablename, JsScrap().data)
+        elif tablename == 'python':
+            db_learn.insert_data(tablename, PythonScrap().data)
         message = 'SUCCESS'
     except:
         print('impossible to insert data')
@@ -65,21 +85,5 @@ def get_elearn_list(query):
 
 
 @app.route('/page_data/<theme>')
-def page_datat(theme):
-    return render_template('page_data_js.html', theme=theme)
-
-
-def docker():
-    docker_class = VideoDocker()
-    docker_class.docker_title()
-    docker_class.docker_link()
-    docker_class.docker_youtuber()
-    docker_class.docker_duration()
-    docker_class.docker_vue()
-    docker_class.docker_theme()
-    # print(docker_class.docker_zip())
-
-    return docker_class.docker_zip()
-
-
-docker()
+def page_data(theme):
+    return render_template('index.html')
