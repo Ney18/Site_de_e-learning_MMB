@@ -2,9 +2,10 @@ import mysql.connector
 import logging
 from main import *
 import time
+from docker_scrap import *
 
 
-logging.basicConfig(filename="db_learning.log",
+logging.basicConfig(filename="log/db_learning.log",
                     level=logging.DEBUG,
                     format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 
@@ -22,10 +23,11 @@ class Table():
 
         try:
             self.mydb = mysql.connector.connect(
-                host="e_learning_db_1",
-                user="root",
+                host="db",
+                user="toto",
+                port=3306,
                 database="e_learning_db",
-                password="toto",
+                password="pwd",
             )
         except(mysql.connector.errors.InterfaceError, mysql.connector.errors.ProgrammingError):
             logging.warning('[SQL] Failed to connect to docker container')
@@ -38,7 +40,19 @@ class Table():
 
         logging.info('[SQL] Connection with sql connector : end')
 
-        self.my_docker = docker()
+        self.my_docker = self.docker()
+
+    def docker(self):
+        docker_class = VideoDocker()
+        docker_class.docker_title()
+        docker_class.docker_link()
+        docker_class.docker_youtuber()
+        docker_class.docker_duration()
+        docker_class.docker_vue()
+        docker_class.docker_theme()
+        # print(docker_class.docker_zip())
+
+        return docker_class.docker_zip()
 
     def create_docker_table(self):
 
@@ -72,26 +86,26 @@ class Table():
     def insert_data(self, query, query_plus):
         self.query_specify = f'INSERT INTO content_yt_{query} (lien, titre, videaste, duree, vue, theme) VALUES ( %s, %s, %s, %s, %s, %s)'
         try:
-            self.mycursor = self.myconn.cursor()
+            self.mycursor = self.mydb.cursor()
             self.mycursor.executemany(self.query_specify, query_plus)
         except mysql.connector.Error as err:
             logging.error(err)
             exit()
 
     def select_from_db(self, tablename):
-        self.mycursor = self.myconn.cursor(dictionary=True)
+        self.mycursor = self.mydb.cursor(dictionary=True)
         self.query_specify = f'SELECT * FROM content_yt_{tablename};'
         self.mycursor.execute(self.query_specify)
         result = self.mycursor.fetchall()
         return result
 
     def __disconnect__(self):
-        self.myconn.commit()
-        self.myconn.close()
+        self.mydb.commit()
+        self.mydb.close()
 
     def execute_query(self, callback_func, query):
         try:
-            self.mycursor = self.myconn.cursor()
+            self.mycursor = self.mydb.cursor()
             callback_func(query)
             self.mycursor.execute(self.query_specify)
         except mysql.connector.Error as err:
@@ -99,6 +113,6 @@ class Table():
             exit()
 
 
-my_table = Table()
-my_table.create_docker_table()
-my_table.file_docker_table()
+# my_table = Table()
+# my_table.create_docker_table()
+# my_table.file_docker_table()

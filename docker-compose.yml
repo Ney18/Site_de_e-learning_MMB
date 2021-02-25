@@ -7,11 +7,11 @@ services:
     restart: always
     environment:
       - MYSQL_DATABASE=e_learning_db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=toto
-
-
-
+      - MYSQL_USER=toto
+      - MYSQL_PASSWORD=pwd
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 3306:3306
   app:
     restart: always
     build: .
