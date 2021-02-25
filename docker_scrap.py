@@ -40,8 +40,6 @@ class VideoDocker() :
 
         logging.info("[DOCKER] accessing docker video link -- End")
         return self.docker_list_link
-        
-        
 
     def docker_title(self):
 
@@ -122,12 +120,3 @@ class VideoDocker() :
         
         
 
-
-docker_class = VideoDocker()
-docker_class.docker_title()
-docker_class.docker_link()
-docker_class.docker_youtuber()
-docker_class.docker_duration()
-docker_class.docker_vue()
-docker_class.docker_theme()
-print(docker_class.docker_zip())

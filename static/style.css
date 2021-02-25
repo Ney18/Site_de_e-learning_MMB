@@ -34,11 +34,14 @@ body{
 .nav_link{
     text-decoration: none;
     color: black;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    
 }
 
 .nav_link:hover{
     color:white;
+    font-size: 1.6rem;
 }
 
 .search{
@@ -76,7 +79,8 @@ body{
 .main_icon{
     margin-top: 1em 1em;
     font-size: 4rem;
-    transition: 1s;
+    transition: .8s;
+    
 }
 
 .main_icon:hover{
@@ -87,7 +91,19 @@ body{
 
 .main_container{
     width: 95%;
-    background: #F2EAEA;
+    background: #EEECEC;
     height: 800px;
     margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+
+}
+
+.video_link{
+
+    background: white;
+    width: 30%;
+    margin: 3em 0;
 }
