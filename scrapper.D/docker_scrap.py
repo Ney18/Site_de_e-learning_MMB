@@ -1,7 +1,5 @@
 # coding=utf-8
 
-import requests
-from bs4 import BeautifulSoup #pour utiliser BeautifulSoup j'ai besoin de bs4
 import logging
 
 class VideoDocker() :

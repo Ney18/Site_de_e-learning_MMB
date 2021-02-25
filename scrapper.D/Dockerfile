@@ -2,8 +2,6 @@ FROM python:latest
 
 WORKDIR /library
 
-COPY ./.
+COPY . .
 
-RUN pip install mysql-connector-python bs4
-
-CMD ["python", "docker_scrap.py"]
+RUN pip3 install  mysql-connector-python 

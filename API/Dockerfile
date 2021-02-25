@@ -4,8 +4,7 @@ WORKDIR /flask
 
 EXPOSE 4002
 
-COPY ./.
+COPY . .
 
-RUN pip flask install mysql-connector-python
+RUN pip3 install flask mysql-connector-python
 
-CMD ["python", "api_flask.py"]
