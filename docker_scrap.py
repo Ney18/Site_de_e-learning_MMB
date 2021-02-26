@@ -75,7 +75,7 @@ class VideoDocker():
         logging.info("[DOCKER] accessing docker video duration -- Start")
 
         try:
-            self.docker_list_duration = ["2:10:18", "3:36:54", "5:40"]
+            self.docker_list_duration = ["2h10m18", "3h36m54", "5h40m"]
         except Exception as e:
             logging.error(
                 "[DOCKER] Error in docker duration list !!!! " + str(e))

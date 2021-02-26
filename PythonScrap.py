@@ -22,3 +22,7 @@ class PythonScrap:
             ]
         except Exception as e:
             logging.error("error lors de l'insertion")
+
+toto = PythonScrap()
+toto.data
+

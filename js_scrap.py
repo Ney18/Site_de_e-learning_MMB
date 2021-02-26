@@ -22,3 +22,7 @@ class JsScrap:
             ]
         except Exception as e:
             logging.error("error lors de l'insertion")
+
+
+my_js = JsScrap()
+my_js.get_data()

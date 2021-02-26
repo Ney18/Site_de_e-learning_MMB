@@ -29,8 +29,8 @@ class Table():
                 database="e_learning_db",
                 password="pwd",
             )
-        except(mysql.connector.errors.InterfaceError, mysql.connector.errors.ProgrammingError):
-            logging.warning('[SQL] Failed to connect to docker container')
+        except Exception as e:
+            logging.warning('[SQL] Failed to connect to docker container' + str(e))
 
         try:
             self.c = self.mydb.cursor()
@@ -40,7 +40,9 @@ class Table():
 
         logging.info('[SQL] Connection with sql connector : end')
 
-        self.my_docker = self.docker()
+        self.my_docker = docker()
+        self.my_javaScript = js()
+        self.my_python = python()
 
     def docker(self):
         docker_class = VideoDocker()
@@ -55,30 +57,60 @@ class Table():
         return docker_class.docker_zip()
 
     def create_docker_table(self):
+    
+        logging.info("[SQL] Creation data_videos table  : start")
 
-        logging.info("[SQL] Creation docker table  : start")
+        self.c.execute("DROP TABLE data_videos")
+        self.c.execute("CREATE TABLE IF NOT EXISTS data_videos (id INTEGER AUTO_INCREMENT PRIMARY KEY , link VARCHAR(350) NOT NULL, title VARCHAR(350) NOT NULL, youtuber VARCHAR(350) NOT NULL, duration VARCHAR(30) NOT NULL, likes VARCHAR(350), theme VARCHAR(350))")
 
-        self.c.execute("DROP TABLE docker")
-        self.c.execute("CREATE TABLE IF NOT EXISTS docker (id INTEGER AUTO_INCREMENT PRIMARY KEY , link VARCHAR(350) NOT NULL, title VARCHAR(350) NOT NULL, youtuber VARCHAR(350) NOT NULL, duration VARCHAR(30) NOT NULL, likes VARCHAR(350), theme VARCHAR(350))")
+        logging.info("[SQL] Creation data_videos table : end")
 
-        logging.info("[SQL] Creation docker carpet : end")
+
+
+
 
     def file_docker_table(self):
 
-        logging.info("[SQL] Insert data in docker table  : start")
+        logging.info("[SQL] Insert data in data_videos table  : start")
+
+
 
         try:
-            insert = "INSERT INTO docker (link, title, youtuber, duration, likes, theme) VALUES(%s, %s, %s, %s, %s, %s);"
+            insert = "INSERT INTO data_videos (link, title, youtuber, duration, likes, theme) VALUES(%s, %s, %s, %s, %s, %s);"
             value = self.my_docker
-            print('value of docker table', value)
             self.c.executemany(insert, value)
 
             self.mydb.commit()
         except Exception as e:
-            logging.error(
-                '[SQL] ERROOOOR !! empty list, didnt fill docker table' + str(e))
+            logging.error('[SQL] ERROOOOR !! empty list, didnt fill docker columns' +str(e))
 
-        logging.info("[SQL] Insert data in docker table  : end")
+
+
+
+        try:
+            insert = "INSERT INTO data_videos (link, title, youtuber, duration, likes, theme) VALUES(%s, %s, %s, %s, %s, %s);"
+            value = self.my_javaScript
+            self.c.executemany(insert, value)
+
+            self.mydb.commit()
+        except Exception as e:
+            logging.error('[SQL] ERROOOOR !! empty list, didnt fill javaScript column' +str(e))
+
+
+
+
+        try:
+            insert = "INSERT INTO data_videos (link, title, youtuber, duration, likes, theme) VALUES(%s, %s, %s, %s, %s, %s);"
+            value = self.my_python
+
+            self.c.executemany(insert, value)
+
+            self.mydb.commit()
+        except Exception as e:
+            logging.error('[SQL] ERROOOOR !! empty list, didnt fill python colone' +str(e))
+
+        
+        logging.info("[SQL] Insert data in data_videos table  : end")
 
     def create_table(self, query):
         self.query_specify = f'CREATE TABLE IF NOT EXISTS content_yt_{query} (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, lien VARCHAR (2000), titre VARCHAR (100), videaste VARCHAR(100), duree VARCHAR (100), vue INT, theme VARCHAR(100));'

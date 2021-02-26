@@ -6,7 +6,6 @@ from setup_logger import logging
 from docker_scrap import *
 from js_scrap import *
 from PythonScrap import *
-#from file_db import *
 
 # print("hello")
 app = Flask(__name__)
@@ -31,59 +30,16 @@ def docker():
 
     return docker_class.docker_zip()
 
+docker()
 
-# docker()
+def js():
+    my_js = JsScrap()
+    
 
+    return my_js.get_data()
 
-@app.route('/')
-def index():
-    return message
+def python():
+    my_data = PythonScrap()
+    return my_data.get_data()
 
-
-@app.route('/create_table/<tablename>')
-def create_table(tablename):
-    global message
-    db_learn = Table()
-    try:
-        db_learn.execute_query(db_learn.create_table, tablename)
-        message = 'SUCCESS'
-    except:
-        message = 'impossible to create table'
-        app.logger.error('impossible to create table')
-    db_learn.__disconnect__()
-    return redirect('/')
-
-
-@app.route('/insert_data/<tablename>')
-def insert_data(tablename):
-    global message
-    db_learn = Table()
-    try:
-        if tablename == 'js':
-            db_learn.insert_data(tablename, JsScrap().data)
-        elif tablename == 'python':
-            db_learn.insert_data(tablename, PythonScrap().data)
-        message = 'SUCCESS'
-    except:
-        print('impossible to insert data')
-        message = 'ERROR'
-    db_learn.__disconnect__()
-    return redirect('/')
-
-
-@app.route('/api/query_data/<query>')
-def get_elearn_list(query):
-    global message
-    try:
-        db_learn = Table()
-        data_learn = db_learn.select_from_db(query)
-        db_learn.__disconnect__()
-        return jsonify(data_learn)
-    except:
-        message = 'ERROR'
-        return redirect('/')
-
-
-@app.route('/page_data/<theme>')
-def page_data(theme):
-    return render_template('index.html')
+python()
