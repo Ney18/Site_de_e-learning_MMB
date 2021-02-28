@@ -1,7 +1,0 @@
-.gitignore
-.Ds_Store
-.log
-.dockerignore
-divers
-log
-__pycache__

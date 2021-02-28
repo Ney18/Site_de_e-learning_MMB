@@ -1,0 +1,28 @@
+2021-02-26 10:39:12,655 - root -INFO - [SQL] Connection with sql docker for docker video table: start
+2021-02-26 10:39:12,686 - mysql.connector.connection -DEBUG - new_auth_plugin: caching_sha2_password
+2021-02-26 10:39:12,691 - mysql.connector.connection -DEBUG - # request: b'\xe8\x13&\t\x80\x88\xf4\x0eiYZN\x167\x0eBNv\xdb,' size: 20
+2021-02-26 10:39:12,696 - mysql.connector.connection -DEBUG - # server response packet: bytearray(b"L\x00\x00\x05\xff\x15\x04#28000Access denied for user \'toto\'@\'192.168.112.3\' (using password: YES)")
+2021-02-26 10:39:12,703 - root -WARNING - [SQL] Failed to connect to docker container1045 (28000): Access denied for user 'toto'@'192.168.112.3' (using password: YES)
+2021-02-26 10:39:12,706 - root -WARNING - [SQL] Failed to establish query, check syntax, will affect creation of table
+2021-02-26 10:39:12,709 - root -INFO - [SQL] Connection with sql connector : end
+2021-02-26 10:40:10,845 - root -INFO - [SQL] Connection with sql docker for docker video table: start
+2021-02-26 10:40:10,872 - mysql.connector.connection -DEBUG - new_auth_plugin: caching_sha2_password
+2021-02-26 10:40:10,875 - mysql.connector.connection -DEBUG - # request: b'\xeb\xf6m\xd9\x0c\xe3,\xfd\xcea\x15\xc1\xaa\xe9\xf0\xecFS\xb6\x9c' size: 20
+2021-02-26 10:40:10,879 - mysql.connector.connection -DEBUG - # server response packet: bytearray(b"L\x00\x00\x05\xff\x15\x04#28000Access denied for user \'toto\'@\'192.168.112.3\' (using password: YES)")
+2021-02-26 10:40:10,884 - root -WARNING - [SQL] Failed to connect to docker container1045 (28000): Access denied for user 'toto'@'192.168.112.3' (using password: YES)
+2021-02-26 10:40:10,886 - root -WARNING - [SQL] Failed to establish query, check syntax, will affect creation of table
+2021-02-26 10:40:10,889 - root -INFO - [SQL] Connection with sql connector : end
+2021-02-26 10:40:16,868 - root -INFO - [SQL] Connection with sql docker for docker video table: start
+2021-02-26 10:40:16,915 - mysql.connector.connection -DEBUG - new_auth_plugin: caching_sha2_password
+2021-02-26 10:40:16,920 - mysql.connector.connection -DEBUG - # request: b'\x05\xcf\xcc\x1d\x08}\x08\x18!+\x0e\xcep\\\xd0\xearWNb' size: 20
+2021-02-26 10:40:16,926 - mysql.connector.connection -DEBUG - # server response packet: bytearray(b"L\x00\x00\x05\xff\x15\x04#28000Access denied for user \'toto\'@\'192.168.112.3\' (using password: YES)")
+2021-02-26 10:40:16,939 - root -WARNING - [SQL] Failed to connect to docker container1045 (28000): Access denied for user 'toto'@'192.168.112.3' (using password: YES)
+2021-02-26 10:40:16,941 - root -WARNING - [SQL] Failed to establish query, check syntax, will affect creation of table
+2021-02-26 10:40:16,943 - root -INFO - [SQL] Connection with sql connector : end
+2021-02-26 10:40:55,082 - root -INFO - [SQL] Connection with sql docker for docker video table: start
+2021-02-26 10:40:55,114 - mysql.connector.connection -DEBUG - new_auth_plugin: caching_sha2_password
+2021-02-26 10:40:55,119 - mysql.connector.connection -DEBUG - # request: b'\xefE\xc7\xefD\xf1{=\x912W0o\x01\xe6[b\xcfP[' size: 20
+2021-02-26 10:40:55,125 - mysql.connector.connection -DEBUG - # server response packet: bytearray(b"L\x00\x00\x05\xff\x15\x04#28000Access denied for user \'toto\'@\'192.168.112.3\' (using password: YES)")
+2021-02-26 10:40:55,133 - root -WARNING - [SQL] Failed to connect to docker container1045 (28000): Access denied for user 'toto'@'192.168.112.3' (using password: YES)
+2021-02-26 10:40:55,136 - root -WARNING - [SQL] Failed to establish query, check syntax, will affect creation of table
+2021-02-26 10:40:55,139 - root -INFO - [SQL] Connection with sql connector : end

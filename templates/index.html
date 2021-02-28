@@ -10,7 +10,7 @@
         <title>CloudAcademy</title>
         <script src="https://kit.fontawesome.com/3ee5796760.js" crossorigin="anonymous"></script>
         <!-- <link rel="stylesheet" href="../static/style.css" type="text/css" /> -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
                 <li><a href="#feature"class="nav_link">Feature</a></li>
                 <div>
                     <input type="text" class="search" placeholder="Choose a theme"/>
-                    <a href="" class="nav_link"><i class="fas search fa-search"></i></a>
+                    <a href="" id="search" class="nav_link"><i class="fas search fa-search"></i></a>
                 </div> 
 
             </div>
@@ -48,7 +48,7 @@
 
       <main class="content">
 
-
+        <p>{{category}}</p>
         <section class="info">
             
             <div class="container sloggan" id="home">
@@ -57,14 +57,18 @@
             </div>  
 
             <div id="icon">
-                <i class="main_icon fab fa-python"></i></i>
-                <i class="main_icon fab fa-js-square"></i>
-                <i class="main_icon fab fa-docker"></i>
+                <a href="#python"><i class="main_icon fab fa-python"></i></i></a>
+                <a href="#js"><i class="main_icon fab fa-js-square"></i></a>
+                <a href="#docker"><i class="main_icon fab fa-docker"></i></a>
             </div>
-            
+
+            <div class="add_content">
+              <p css="text_add title_video"> Want to contribute to the project ? </p>
+              <a href="#add_data"><button class="btn_add_video" id="btn_add_video">Click Here</button></a>
+            </div>
         </section>
 
-        <div class="main_container">
+        <div class="main_container" id="feature">
 
           <div class="video_link"></div>
           <div class="video_link"></div>
@@ -75,13 +79,31 @@
           <div class="video_link"></div>
           <div class="video_link"></div>
           <div class="video_link"></div>
-
         </div>
-        <section id="data"></section>
+
+        <div class="form_data" id='add_data'>
+        <form class="form" action="/" method="POST">
+          <div class="">
+              <label for="video_data_link">Place here the link of your video :</label>
+              <input id="input_link" type="text" name="video_data_link"  placeholder="Link">
+          </div>
+
+          <div>
+              <label for="category">Select your category:</label>
+              <select class="category" name="category">
+                  <option value="Javascript">JavaScript</option>
+                  <option value="Python">Python</option>
+                  <option value="Docker">Docker</option>
+                  <option value="Other">Other ?</option>
+              </select>
+              <button type="submit" class="btn_add_video">Add</button>
+          </div>
+          </form>
+        </div>
       </main>
 
 
-    </div>
+    <footer> <div class="footer"></div> </footer>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
   </body>
