@@ -4,12 +4,14 @@ WORKDIR /app
 
 EXPOSE 5000
 
-ENV FLASK_APP=main.py
+ENV FLASK_APP=api_flask.py
 
 ENV FLASK_RUN_HOST=0.0.0.0
 
 COPY . .
 
-RUN pip install --no-cache-dir -r file/requirements.txt
+RUN pip install -r file/requirements.txt
+RUN pip install pafy
 
-CMD ["flask", "run"]
+
+CMD ["flask", "run"] [ "python bdd.py" ]

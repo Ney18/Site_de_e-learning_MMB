@@ -33,8 +33,9 @@ class VideoDocker():
         logging.info("[DOCKER] accessing docker video link -- Start")
 
         try:
-            self.docker_list_link = ["""<iframe width="560" height="315" src="https://www.youtube.com/embed/fqMOX6JJhGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>""",
-                                     """<iframe width="560" height="315" src="https://www.youtube.com/embed/X48VuDVv0do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>""", """<iframe width="560" height="315" src="https://www.youtube.com/embed/m3cKkYXl-8o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"""]
+            self.docker_list_link = ["""<iframe  src="https://www.youtube.com/embed/fqMOX6JJhGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>""",
+                                     """<iframe  src="https://www.youtube.com/embed/X48VuDVv0do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>""", 
+                                     """<iframe src="https://www.youtube.com/embed/m3cKkYXl-8o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"""]
         except Exception as e:
             logging.error("[DOCKER] Error in docker link list !!!! " + str(e))
 
@@ -102,7 +103,7 @@ class VideoDocker():
         logging.info("[DOCKER] accessing docker video theme -- Start")
 
         try:
-            self.docker_list_theme = ["Docker", "Kubernetes", "Terraform"]
+            self.docker_list_theme = ["Docker", "Docker", "Docker"]
         except Exception as e:
             logging.error("[DOCKER] Error in docker theme list !!!! " + str(e))
 
