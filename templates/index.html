@@ -33,8 +33,8 @@
                 <li><a href="#home" class="nav_link">Home</a></li>
                 <li><a href="#feature"class="nav_link">Feature</a></li>
                 <div>
-                    <input type="text" class="search" placeholder="Choose a theme"/>
-                    <a href="" id="search" class="nav_link"><i class="fas search fa-search"></i></a>
+                    <input type="text" id="input_search" placeholder="Choose a theme"/>
+                    <a href="#" id="search" class="nav_link"><i class="fas search fa-search"></i></a>
                 </div> 
 
             </div>
@@ -48,7 +48,7 @@
 
       <main class="content">
 
-        <p>{{category}}</p>
+        
         <section class="info">
             
             <div class="container sloggan" id="home">
@@ -57,9 +57,10 @@
             </div>  
 
             <div id="icon">
-                <a href="#python"><i class="main_icon fab fa-python"></i></i></a>
-                <a href="#js"><i class="main_icon fab fa-js-square"></i></a>
-                <a href="#docker"><i class="main_icon fab fa-docker"></i></a>
+                <i data-theme="python" class="main_icon fab fa-python"></i>
+                <i data-theme="javascript" class="main_icon fab fa-js-square"></i>
+                <i data-theme="docker" class="main_icon fab fa-docker"></i>
+                <i data-theme="all" class="main_icon fab fa-amilia"></i>
             </div>
 
             <div class="add_content">
@@ -91,10 +92,10 @@
           <div>
               <label for="category">Select your category:</label>
               <select class="category" name="category">
-                  <option value="Javascript">JavaScript</option>
-                  <option value="Python">Python</option>
-                  <option value="Docker">Docker</option>
-                  <option value="Other">Other ?</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="python">Python</option>
+                  <option value="docker">Docker</option>
+                  <option value="other">Other ?</option>
               </select>
               <button type="submit" class="btn_add_video">Add</button>
           </div>
