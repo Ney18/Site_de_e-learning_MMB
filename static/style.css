@@ -71,7 +71,8 @@ body{
 
 #icon{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 40%;
     margin: 1em auto;
     
@@ -79,16 +80,16 @@ body{
 
 
 .main_icon{
-    margin-top: 1em 1em;
+    margin: .6em .5em 0 0;
+    /* margin-right: ; */
     font-size: 4rem;
-    transition: .8s;
+    transition: .3s;
     color: black;
     
 }
 
 .main_icon:hover{
-    font-size: 4.5rem;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 }
 
 

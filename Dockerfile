@@ -11,7 +11,6 @@ ENV FLASK_RUN_HOST=0.0.0.0
 COPY . .
 
 RUN pip install -r file/requirements.txt
-RUN pip install pafy
 
 
 CMD ["flask", "run"] [ "python bdd.py" ]
