@@ -43,7 +43,7 @@ class Table():
     
         logging.info("[SQL] Creation data_videos table  : start")
         self.c.execute("DROP TABLE data_videos")
-        self.c.execute("CREATE TABLE IF NOT EXISTS data_videos (id INTEGER AUTO_INCREMENT PRIMARY KEY , link VARCHAR(350) NOT NULL, title VARCHAR(350) NOT NULL, youtuber VARCHAR(350) NOT NULL, duration VARCHAR(30) NOT NULL, likes VARCHAR(350), theme VARCHAR(350))")
+        self.c.execute("CREATE TABLE IF NOT EXISTS data_videos (id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, link VARCHAR(350) NOT NULL, title VARCHAR(350), youtuber VARCHAR(350), duration VARCHAR(30), likes VARCHAR(350), theme VARCHAR(350) NOT NULL)")
 
         logging.info("[SQL] Creation data_videos table : end")
 
